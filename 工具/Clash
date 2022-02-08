@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+
+act1="wget https://ghproxy.com/https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.7/Clash.for.Windows-0.19.7-x64-linux.tar.gz -O cfw.tar.gz && tar -vxf *.tar.gz"
+act2="wget https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.7/Clash.for.Windows-0.19.7-x64-linux.tar.gz -O cfw.tar.gz && tar -vxf *.tar.gz"
+do="mv cfw/Clash* cfl && mv cfl ~/cfl && rm-rf cfw"
+print('是否加速下载？（没有科学上网请输入y）')
+proxy=input('y/n:')
+print("正在获取0.19.7版本的Clash...")
+if proxy=='y':
+	os.system(act1)
+else:
+	os.system(act2)
+print('已将Clash下载到本地 ~/cfl 目录.')
+choose=input('是否直接运行？y/n：')
+if choose=="y":
+	os.chdir("~/cfl")
+	os.system('./cfw')
+else:
+	print('下次可在 ~/cfl 目录中使用 ./cfw 启动.')

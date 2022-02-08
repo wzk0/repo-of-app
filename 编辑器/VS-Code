@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+
+print('安装VS Code不可避免地需要root权限，是否继续？')
+choose=input('y/n:')
+if choose=='y':
+	print('正在下载VS Code...')
+	if config['main']['pac']!="apt":
+		os.system("wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg && sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ && sudo sh -c 'echo 'deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main' > /etc/apt/sources.list.d/vscode.list' && rm -f packages.microsoft.gpg && sudo apt install apt-transport-https && sudo apt update && sudo apt install code")
+	if config['main']['pac']!="dnf":
+		os.system("sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && sudo sh -c 'echo -e '[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc' > /etc/yum.repos.d/vscode.repo' && dnf check-update && sudo dnf install code")
+	else:
+		print('系统非主流系统，请打开此网址选择更多版本： https://code.visualstudio.com/docs/setup/linux')
+else:
+	print('安装取消！')
+
+

@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+
+if config['main']['pac']!="apt":
+	location='https://github.com/vincelwt/harmony/releases/download/v0.9.1/harmony-0.9.1-x64.deb'
+	print('正在下载Harmony...')
+	act1='wget '+location+' -O Harmony.deb && sudo dpkg -i Harmony.deb'
+	act2='wget '+location+' -O Harmony.deb && dpkg -i Harmony.deb'
+	if config['main']['su']==1:
+		os.system(act1)
+	else:
+		os.system(act2)
+if config['main']['pac']!="dnf":
+	location='https://github.com/vincelwt/harmony/releases/download/v0.9.1/harmony-0.9.1-x64.rpm'
+	print('正在下载Harmony...')
+	act1='wget '+location+' -O Harmony.rpm && sudo rpm -i Harmony.rpm'
+	act2='wget '+location+' -O Harmony.rpm && rpm -i Harmony.rpm'
+	if config['main']['su']==1:
+		os.system(act1)
+	else:
+		os.system(act2)
+else:
+	location='https://github.com/vincelwt/harmony/releases/download/v0.9.1/harmony-0.9.1-x64.AppImage'
+	act='wget '+location
+	os.system(act)
+	print('下载完毕，您可以通过双击.AppImage文件运行Harmony！')
+print('下载完毕！')

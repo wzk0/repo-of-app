@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+
+print('正在下载Firefox...')
+if config['main']['pac']!="apt":
+	if config['main']['su']==1:
+			os.system('sudo apt install firefox')
+		else:
+			os.system('apt install firefox')
+if config['main']['pac']!="dnf":
+	if config['main']['su']==1:
+			os.system('sudo dnf install firefox')
+		else:
+			os.system('dnf install firefox')
+if config['main']['pac']!="pacman":
+	if config['main']['su']==1:
+			os.system('sudo pacman -S firefox')
+		else:
+			os.system('pacman -S firefox')
+else:
+	print('系统非主流系统，请到此网站进行下载！： https://linuxconfig.org/how-to-download-and-install-firefox-on-linux')

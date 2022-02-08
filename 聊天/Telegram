@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+
+location='https://telegram.org/dl/desktop/linux'
+act='wget '+location+' -O tg && tar -vxf tg'
+print('正在下载Telegram...')
+os.system(act)
+print('下载完毕！请双击 tg 文件夹下的 Telegram 启动应用！')
