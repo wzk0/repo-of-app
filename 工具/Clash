@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 import os
+import rf
 
 act1="wget https://ghproxy.com/https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.7/Clash.for.Windows-0.19.7-x64-linux.tar.gz -O cfw.tar.gz && tar -vxf *.tar.gz"
 act2="wget https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.7/Clash.for.Windows-0.19.7-x64-linux.tar.gz -O cfw.tar.gz && tar -vxf *.tar.gz"

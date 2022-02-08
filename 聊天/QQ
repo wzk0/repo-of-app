@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 import os
+import rf
 
 location='https://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_x86_64.sh'
 print('安装QQ不可避免地需要root权限，是否继续？')

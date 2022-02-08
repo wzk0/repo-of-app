@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 import os
+import rf
 
 location='https://telegram.org/dl/desktop/linux'
 act='wget '+location+' -O tg && tar -vxf tg'

@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
+import rf
 import os
 import sys
 
-if config['main']['pac']!="apt":
+if rf.pac!="apt":
 	print('由于默认您没有安装snap商店，Spotify不会安装；如果安装了snap，您可以输入该指令安装： snap install spotify ')
 	sys.exit(0)
 
 act1='curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -  &&  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list && sudo apt-get update && sudo apt-get install spotify-client'
 act2='curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | apt-key add -  &&  echo "deb http://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list && apt-get update && apt-get install spotify-client'
 print('正在下载Spotify...')
-if config['main']['su']==1:
+if rf.su==1:
 	os.system(act1)
 else:
 	os.system(act2)

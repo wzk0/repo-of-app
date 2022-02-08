@@ -1,19 +1,20 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 import os
+import rf
 
 print('正在下载Brave...')
-if config['main']['pac']!="apt":
+if rf.pac!="apt":
 	act1='sudo apt install apt-transport-https curl && sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list && sudo apt update && sudo apt install brave-browser'
 	act2=' apt install apt-transport-https curl && curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" tee /etc/apt/sources.list.d/brave-browser-release.list && apt update && apt install brave-browser'
-	if config['main']['su']==1:
+	if rf.su==1:
 		os.system(act1)
 	else:
 		os.system(act2)
-if config['main']['pac']!="dnf":
+if rf.pac!="dnf":
 	act1='sudo dnf install dnf-plugins-core && sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/ && sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc && sudo dnf install brave-browser'
 	act2=' dnf install dnf-plugins-core && dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/ && rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc && dnf install brave-browser'
-	if config['main']['su']==1:
+	if rf.su==1:
 		os.system(act1)
 	else:
 		os.system(act2)

@@ -1,21 +1,22 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 import os
+import rf
 
 print('正在下载Vivaldi...')
-if config['main']['pac']!="apt":
+if rf.pac!="apt":
 	location='https://downloads.vivaldi.com/stable/vivaldi-stable_5.0.2497.51-1_amd64.deb'
 	act1='wget '+location+' -O vivaldi.deb && sudo dpkg -i vivaldi.deb'
 	act2='wget '+location+' -O vivaldi.deb && dpkg -i vivaldi.deb'
-	if config['main']['su']==1:
+	if rf.su==1:
 		os.system(act1)
 	else:
 		os.system(act2)
-if config['main']['pac']!="dnf":
+if rf.pac!="dnf":
 	location='https://downloads.vivaldi.com/stable/vivaldi-stable-5.0.2497.51-1.x86_64.rpm'
 	act1='wget '+location+' -O vivaldi.rpm && sudo rpm -i vivaldi.rpm'
 	act2='wget '+location+' -O vivaldi.rpm && rpm -i vivaldi.rpm'
-	if config['main']['su']==1:
+	if rf.su==1:
 		os.system(act1)
 	else:
 		os.system(act2)

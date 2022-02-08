@@ -1,17 +1,18 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 import os
+import rf
 
 location='https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb'
 
-if config['main']['pac']!="apt":
+if rf.pac!="apt":
 	print('Steam不支持除Debian系以外的系统！')
 	sys.exit(0)
 
 act1='wget '+location+' -O steam.deb && sudo dpkg -i steam.deb'
 act2='wget '+location+' -O steam.deb && dpkg -i steam.deb'
 print('正在下载Steam...')
-if config['main']['su']==1:
+if rf.su==1:
 	os.system(act1)
 else:
 	os.system(act2)

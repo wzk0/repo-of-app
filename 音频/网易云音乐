@@ -2,8 +2,9 @@
 # -*- coding: UTF-8 -*-
 import os
 import sys
+import rf
 
-if config['main']['pac']!="apt":
+ifrf.pac!="apt":
 	print('网易云音乐不支持除Debian系以外的系统！')
 	sys.exit(0)
 
@@ -11,7 +12,7 @@ location='https://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu
 act1='wget '+location+' -O wyy.deb && sudo dpkg -i wyy.deb'
 act2='wget '+location+' -O wyy.deb && dpkg -i wyy.deb'
 print('正在下载网易云音乐...')
-if config['main']['su']==1:
+if rf.su==1:
 	os.system(act1)
 else:
 	os.system(act2)

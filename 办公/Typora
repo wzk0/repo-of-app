@@ -2,15 +2,16 @@
 # -*- coding: UTF-8 -*-
 import os
 import sys
+import rf
 
-if config['main']['pac']!="apt":
+if rf.pac!="apt":
 	print('Typora不支持除Debian系以外的系统！')
 	sys.exit(0)
 
 act1="wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add - && sudo add-apt-repository 'deb https://typora.io/linux ./' && sudo apt-get update && sudo apt-get install typora"
 act2="wget -qO - https://typora.io/linux/public-key.asc | apt-key add - && add-apt-repository 'deb https://typora.io/linux ./' && apt-get update && apt-get install typora"
 print('正在下载Typora...')
-if config['main']['su']==1:
+if rf.su==1:
 	os.system(act1)
 else:
 	os.system(act2)

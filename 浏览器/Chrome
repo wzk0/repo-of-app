@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
+import rf
 
 print('由于下载需要验证，请打开Chrome官方网址下载： https://www.google.com/chrome/?platform=linux')
-if config['main']['pac']!="apt":
+if rf.pac!="apt":
 	print('您的系统为Debian系，请选择.deb文件进行下载！')
-if config['main']['pac']!="yum":
+if rf.pac!="yum":
 	print('您的系统为Red Hat系，请选择.rpm文件进行下载！')
 else:
 	print('您的系统非主流系统，请打开此网址下载Chromium： https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/linux/chromium_packages.md')

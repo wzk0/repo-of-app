@@ -1,20 +1,21 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 import os
+import rf
 
 print('正在下载Firefox...')
-if config['main']['pac']!="apt":
-	if config['main']['su']==1:
+if rf.pac!="apt":
+	if rf.su==1:
 			os.system('sudo apt install firefox')
 		else:
 			os.system('apt install firefox')
-if config['main']['pac']!="dnf":
-	if config['main']['su']==1:
+if rf.pac!="dnf":
+	if rf.su==1:
 			os.system('sudo dnf install firefox')
 		else:
 			os.system('dnf install firefox')
-if config['main']['pac']!="pacman":
-	if config['main']['su']==1:
+if rf.pac!="pacman":
+	if rf.su==1:
 			os.system('sudo pacman -S firefox')
 		else:
 			os.system('pacman -S firefox')
