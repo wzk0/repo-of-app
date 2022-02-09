@@ -4,7 +4,7 @@ import os
 import rf
 
 print('正在下载Vivaldi...')
-if rf.pac!="apt":
+if rf.pac=="apt":
 	location='https://downloads.vivaldi.com/stable/vivaldi-stable_5.0.2497.51-1_amd64.deb'
 	act1='wget '+location+' -O vivaldi.deb && sudo dpkg -i vivaldi.deb'
 	act2='wget '+location+' -O vivaldi.deb && dpkg -i vivaldi.deb'
@@ -12,7 +12,7 @@ if rf.pac!="apt":
 		os.system(act1)
 	else:
 		os.system(act2)
-if rf.pac!="dnf":
+if rf.pac=="dnf":
 	location='https://downloads.vivaldi.com/stable/vivaldi-stable-5.0.2497.51-1.x86_64.rpm'
 	act1='wget '+location+' -O vivaldi.rpm && sudo rpm -i vivaldi.rpm'
 	act2='wget '+location+' -O vivaldi.rpm && rpm -i vivaldi.rpm'

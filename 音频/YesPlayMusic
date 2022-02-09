@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+import rf
+
+print('正在下载YesPlayMusic...')
+if rf.pac=="apt":
+	location='https://github.com/qier222/YesPlayMusic/releases/download/v0.4.3/yesplaymusic_0.4.3_amd64.deb'
+	act1='wget '+location+' -O yes.deb && sudo dpkg -i yes.deb'
+	act2='wget '+location+' -O yes.deb && dpkg -i yes.deb'
+	if rf.su==1:
+		os.system(act1)
+	else:
+		os.system(act2)
+	print('下载完毕！')
+else:
+	location='https://github.com/qier222/YesPlayMusic/releases/download/v0.4.3/YesPlayMusic-0.4.3.AppImage'
+	act='wget '+location+' -O YesPlayMusic.AppImage'
+	os.system(act)
+	print('下载完毕！双击YesPlayMusic.AppImage即可！')

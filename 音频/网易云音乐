@@ -4,7 +4,7 @@ import os
 import sys
 import rf
 
-ifrf.pac!="apt":
+if rf.pac!="apt":
 	print('网易云音乐不支持除Debian系以外的系统！')
 	sys.exit(0)
 

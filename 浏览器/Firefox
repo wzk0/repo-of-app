@@ -4,17 +4,17 @@ import os
 import rf
 
 print('正在下载Firefox...')
-if rf.pac!="apt":
+if rf.pac=="apt":
 	if rf.su==1:
 			os.system('sudo apt install firefox')
 		else:
 			os.system('apt install firefox')
-if rf.pac!="dnf":
+if rf.pac=="dnf":
 	if rf.su==1:
 			os.system('sudo dnf install firefox')
 		else:
 			os.system('dnf install firefox')
-if rf.pac!="pacman":
+if rf.pac=="pacman":
 	if rf.su==1:
 			os.system('sudo pacman -S firefox')
 		else:

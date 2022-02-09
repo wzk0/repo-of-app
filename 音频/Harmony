@@ -3,7 +3,7 @@
 import os
 import rf
 
-if rf.pac!="apt":
+if rf.pac=="apt":
 	location='https://github.com/vincelwt/harmony/releases/download/v0.9.1/harmony-0.9.1-x64.deb'
 	print('正在下载Harmony...')
 	act1='wget '+location+' -O Harmony.deb && sudo dpkg -i Harmony.deb'
@@ -12,7 +12,7 @@ if rf.pac!="apt":
 		os.system(act1)
 	else:
 		os.system(act2)
-if rf.pac!="dnf":
+if rf.pac=="dnf":
 	location='https://github.com/vincelwt/harmony/releases/download/v0.9.1/harmony-0.9.1-x64.rpm'
 	print('正在下载Harmony...')
 	act1='wget '+location+' -O Harmony.rpm && sudo rpm -i Harmony.rpm'

@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+import rf
+
+print('正在下载PicGo...')
+location='https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0/PicGo-2.3.0.AppImage'
+act='wget '+location+' -O PicGo.AppImage'
+os.system(act)
+print('下载完毕！双击PicGo.AppImage即可！')

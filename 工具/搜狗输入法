@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+import rf
+import sys
+
+if rf.pac!="apt":
+	print('搜狗输入法不支持除Debian系以外的系统！')
+	sys.exit(0)
+
+location='https://ime.sogouimecdn.com/202202091051/1735e5c224eacc54fcf3910003e58ac6/dl/index/1639750479/sogoupinyin_3.4.0.9700_amd64.deb'
+act1='wget '+location+' -O sougou.deb && sudo dpkg -i sougou.deb'
+act2='wget '+location+' -O sougou.deb && dpkg -i sougou.deb'
+print('正在下载搜狗输入法...')
+if rf.su==1:
+	os.system('sudo apt purge ibus && sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2 && sudo apt install libgsettings-qt1')
+	os.system(act1)
+else:
+	os.system('apt purge ibus && apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2 && apt install libgsettings-qt1')
+	os.system(act2)
+print('下载完毕！需要重启电脑以生效，是否立即重启？')
+choose=input('y/n:')
+if choose=='y':
+	os.system('reboot')
+else:
+	print('请稍后自动重启！')

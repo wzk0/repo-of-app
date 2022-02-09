@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+import rf
+
+location='https://github.com/liupan1890/aliyunpan/releases/download/v2.9.24/Linux.v2.9.24.zip'
+act='wget 'location+' && unzip Linux.v2.9.24.zip && mv 阿里小白羊版Linux v2.9.24 阿里云'
+os.system(act)
+print('下载完毕！请打开 阿里云 文件夹并双击其中的 阿里云盘小白羊版 运行！')
