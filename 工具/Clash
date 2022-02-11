@@ -13,6 +13,7 @@ if proxy=='y':
 	os.system(act1)
 else:
 	os.system(act2)
+os.system(do)
 print('已将Clash下载到 cfl 目录.')
 choose=input('是否直接运行？y/n：')
 if choose=="y":
