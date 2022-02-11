@@ -8,7 +8,7 @@ if rf.pac!="apt":
 	print('搜狗输入法不支持除Debian系以外的系统！')
 	sys.exit(0)
 
-location='https://ime.sogouimecdn.com/202202091051/1735e5c224eacc54fcf3910003e58ac6/dl/index/1639750479/sogoupinyin_3.4.0.9700_amd64.deb'
+location='https://ghproxy.com/https://github.com/wzk0/repo-of-app/releases/download/%E6%90%9C%E7%8B%97/sogoupinyin_3.4.0.9700_amd64.deb'
 act1='wget '+location+' -O sougou.deb && sudo dpkg -i sougou.deb'
 act2='wget '+location+' -O sougou.deb && dpkg -i sougou.deb'
 print('正在下载搜狗输入法...')
