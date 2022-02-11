@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+import sys
+import rf
+
+if rf.pac!="apt":
+	print('钉钉不支持除Debian系以外的系统！')
+	sys.exit(0)
+
+location='https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_1.2.0.132_amd64.deb'
+act1='wget '+location+' -O 钉钉.deb && sudo dpkg -i 钉钉.deb'
+act2='wget '+location+' -O 钉钉.deb && dpkg -i 钉钉.deb'
+print('正在下载钉钉...')
+if rf.su==1:
+	os.system(act1)
+else:
+	os.system(act2)
+print('下载完毕！')
