@@ -1,5 +1,6 @@
 .
 ├── 办公
+│   ├── 钉钉
 │   ├── Joplin
 │   ├── Typora
 │   └── WPS-Office
@@ -28,5 +29,5 @@
 │   ├── Harmony
 │   ├── Spotify
 │   └── YesPlayMusic
-└── 游戏
-     └── Steam
+├── 游戏
+└   └── Steam
