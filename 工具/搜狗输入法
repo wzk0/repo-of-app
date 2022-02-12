@@ -13,10 +13,10 @@ act1='wget '+location+' -O sougou.deb && sudo dpkg -i sougou.deb'
 act2='wget '+location+' -O sougou.deb && dpkg -i sougou.deb'
 print('正在下载搜狗输入法...')
 if rf.su==1:
-	os.system('sudo apt purge ibus && sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2 && sudo apt install libgsettings-qt1')
+	os.system('sudo apt purge ibus && sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2 && sudo apt install libgsettings-qt1 fcitx')
 	os.system(act1)
 else:
-	os.system('apt purge ibus && apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2 && apt install libgsettings-qt1')
+	os.system('apt purge ibus && apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2 && apt install libgsettings-qt1 fcitx')
 	os.system(act2)
 print('下载完毕！需要重启电脑以生效，是否立即重启？')
 choose=input('y/n:')
