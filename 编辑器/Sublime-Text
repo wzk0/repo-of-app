@@ -12,6 +12,7 @@ if rf.pac=="apt":
 		os.system(act1)
 	else:
 		os.system(act2)
+	print('下载完成！')
 if rf.pac=="yum":
 	act1='sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg && sudo yum-config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo && sudo yum install sublime-text'
 	act2=' rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg && yum-config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo && yum install sublime-text'
@@ -19,8 +20,14 @@ if rf.pac=="yum":
 		os.system(act1)
 	else:
 		os.system(act2)
+	print('下载完成！')
 if rf.pac=="dnf":
 	act1='sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg && sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo && sudo dnf install sublime-text'
 	act2=' rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg && dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo && dnf install sublime-text'
+	if rf.su==1:
+		os.system(act1)
+	else:
+		os.system(act2)
+	print('下载完成！')
 else:
 	print('您的系统非主流系统，请打开官方网址选择： https://www.sublimetext.com/docs/linux_repositories.html')
