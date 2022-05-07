@@ -12,8 +12,8 @@
 │   ├── 搜狗输入法
 │   ├── Clash
 │   └── PicGo
-├── 开发
 ├── 聊天
+│   ├── 微信
 │   ├── Discord
 │   ├── QQ
 │   └── Telegram
@@ -22,12 +22,11 @@
 │   ├── Chrome
 │   ├── Firefox
 │   └── Vivaldi
-├── 视频
-├── 图形
 ├── 音频
 │   ├── 网易云音乐
 │   ├── Harmony
 │   ├── Spotify
 │   └── YesPlayMusic
-└── 游戏
-   └── Steam
+├── 游戏
+│   └── Steam
+

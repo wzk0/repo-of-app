@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+import os
+import sys
+import rf
+
+location='http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb'
+
+if rf.pac!="apt":
+	print('微信不支持除Debian系以外的系统！')
+	sys.exit(0)
+
+act1='wget '+location+' -O weixin_2.1.1_amd64.deb && sudo dpkg -i weixin_2.1.1_amd64.deb'
+act2='wget '+location+' -O weixin_2.1.1_amd64.deb && dpkg -i weixin_2.1.1_amd64.deb'
+f1='sudo apt -f install'
+f2='apt -f install '
+print('正在下载微信...')
+if rf.su==1:
+	os.system(act1)
+	os.system(f1)
+	os.system(act1)
+else:
+	os.system(act2)
+	os.system(f2)
+	os.system(act2)
+print('下载完毕！')
